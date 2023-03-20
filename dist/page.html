@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GettingStartedWithFirebase</title>
+        <script defer src="./bundle.js"></script>
+        <style>
+            h1{
+                        font-family: 'Courier New', Courier, monospace;
+                        font-size: 40px;
+                        text-align: center;
+                        padding:20px;
+                        padding-top: 25px;
+                        margin:0px;
+                    }
+            h2{
+                    font-family:cursive;
+                    text-align: center;
+                    padding:20px;
+                    margin:0px;
+                }
+            
+
+            p, li{
+                font: helvetica;
+                font-size: 20px;
+            }
+            body{
+                text-align:center;
+                background-image: linear-gradient(to right, #f3ced2, #cdb8cc);
+                padding:0px;
+                margin:0px;
+            }
+
+            ul.list{
+                display: inline-block;
+                text-align: left;
+            }
+
+            a{
+              color: white;
+              text-decoration: none;
+            }
+
+            a:hover{
+              color:#f3ced2;
+            }
+
+            #tabs{
+              list-style-type: none;
+              background-color: rgba(58, 48, 48, 0.8);
+              color:white;
+              padding:0px;
+              margin:0px;
+              margin-bottom: 20px;
+              overflow:hidden;
+            }
+            .tabs2{
+              float:left;
+              display: block;
+              text-align: center;
+              padding: 15px;
+              font-size: 20px;
+            }
+
+            .container{
+              background-color: #f2f2f2;
+              width: 220px;
+              height: 270px;
+              float: left;
+              padding: 5px;
+              margin: 10px;
+            }
+            img{
+              padding-top: 10px;
+              margin:auto;
+            }
+            .row{
+              width: 800px;
+              margin: auto;
+            }
+            .row::after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+        </style>
+    </head>
+    <body>
+      <div>
+        
+      <div>
+          <div>
+            <h1>PROFILE</h1><hr style="margin-bottom:0px;">
+
+            <ul id="tabs">
+              <li class="tabs2"><a href="#photos">Photos</a></li>
+              <li class="tabs2" style="float:right"><a href="#" id="logout" style="display: none;">Log Out</a></li>
+            </ul>
+
+            <img src="images/tina2.jpg" alt="Tina" width="auto" height="600px"/>
+            <h1>CHRISTINA MAE T. GERZON</h1>
+            <p><strong>Nickname:</strong> Tina <br><strong>Birthday:</strong> October 23, 2002<br>
+                <strong>Height:</strong> 145cm <em>(4'9")</em> <br><strong>Weight:</strong> 43kg<em>(95 lbs)</em><br><strong>Blood Type:</strong> Unknown <br><strong>MBTI Type:</strong>Unknown </p>
+            <h2>Tina Facts</h2>
+            <div class="facts">
+            <ul class="list">
+                <li>Tina is from Baloi, Lanao del Norte</li>
+                <li>Her friends also her "Buyog" while her family call her "May May"</li>
+                <li>She has two younger sisters</li>
+                <li>Her hobbies are reading and listening to music</li>
+                <li>Her shoe size is 36</li>
+                <li>Her favorite fruit is Avocado</li>
+            </ul></div><hr>
+            <div id="photos">
+            <h1>PHOTOS</h1>
+            <center><div class="row">
+            <div class="container">
+              <img src="images/tina.jpg" alt="Tina" width="200" height="200px"/>
+              <p>02/09/2021</p>
+            </div>
+
+            <div class="container">
+              <img src="images/tina3.jpg" alt="Tina" width="200" height="200px"/>
+              <p>25/12/2021</p>
+            </div>
+
+            <div class="container">
+              <img src="images/tina4.jpg" alt="Tina" width="200" height="200px"/>
+              <p>29/05/2022</p>
+            </div>
+
+            <div class="container">
+              <img src="images/tina5.jpg" alt="Tina" width="200" height="200px"/>
+              <p>03/07/2022</p>
+            </div>
+
+            <div class="container">
+              <img src="images/tina6.jpg" alt="Tina" width="200" height="200px"/>
+              <p>17/12/2022</p>
+            </div>
+
+            <div class="container">
+              <img src="images/tina7.jpg" alt="Tina" width="200" height="200px"/>
+              <p>21/12/2022</p>
+            </div>
+
+            <div class="container">
+              <img src="images/tina8.jpg" alt="Tina" width="200" height="200px"/>
+              <p>10/03/2023</p>
+            </div>
+
+            <div class="container">
+              <img src="images/tina9.jpg" alt="Tina" width="200" height="200px"/>
+              <p>13/03/2023</p>
+            </div>
+            </div></center>
+            </div>
+          </div>
+      </div>
+  </body>
+</html>
+
+<script type="module">
+
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+  
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+apiKey: "AIzaSyDU7Sc9_WqIIHN6siYrIUKqPf-5404y5DY",
+authDomain: "gettingstartedwithfireba-d38f6.firebaseapp.com",
+projectId: "gettingstartedwithfireba-d38f6",
+storageBucket: "gettingstartedwithfireba-d38f6.appspot.com",
+messagingSenderId: "777429333088",
+appId: "1:777429333088:web:501f9362711dfa57157f05",
+measurementId: "G-SGMYE7X6HQ"
+};
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const auth = getAuth();
+  console.log(app);
+
+      document.getElementById('logout').style.display = 'block';
+   //----- Logout code start	  
+   document.getElementById("logout").addEventListener("click", function() {
+    signOut(auth).then(() => {
+      // Sign-out successful.
+      console.log('Sign-out successful.');
+      alert('Sign-out successful.');
+      window.location.href = "login.html";
+      document.getElementById('logout').style.display = 'none';
+    }).catch((error) => {
+      // An error happened.
+      console.log('An error happened.');
+    });		  		  
+  });
+  //----- End
+</script>
+    
