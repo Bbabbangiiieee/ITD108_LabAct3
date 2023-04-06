@@ -1,206 +1,273 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>GettingStartedWithFirebase</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>ProFile</title>
         <script defer src="./bundle.js"></script>
-        <style>
-            h1{
-                        font-family: 'Courier New', Courier, monospace;
-                        font-size: 40px;
-                        text-align: center;
-                        padding:20px;
-                        padding-top: 25px;
-                        margin:0px;
-                    }
-            h2{
-                    font-family:cursive;
-                    text-align: center;
-                    padding:20px;
-                    margin:0px;
-                }
-            
-
-            p, li{
-                font: helvetica;
-                font-size: 20px;
-            }
-            body{
-                text-align:center;
-                background-image: linear-gradient(to right, #f3ced2, #cdb8cc);
-                padding:0px;
-                margin:0px;
-            }
-
-            ul.list{
-                display: inline-block;
-                text-align: left;
-            }
-
-            a{
-              color: white;
-              text-decoration: none;
-            }
-
-            a:hover{
-              color:#f3ced2;
-            }
-
-            #tabs{
-              list-style-type: none;
-              background-color: rgba(58, 48, 48, 0.8);
-              color:white;
-              padding:0px;
-              margin:0px;
-              margin-bottom: 20px;
-              overflow:hidden;
-            }
-            .tabs2{
-              float:left;
-              display: block;
-              text-align: center;
-              padding: 15px;
-              font-size: 20px;
-            }
-
-            .container{
-              background-color: #f2f2f2;
-              width: 220px;
-              height: 270px;
-              float: left;
-              padding: 5px;
-              margin: 10px;
-            }
-            img{
-              padding-top: 10px;
-              margin:auto;
-            }
-            .row{
-              width: 800px;
-              margin: auto;
-            }
-            .row::after {
-              content: "";
-              clear: both;
-              display: table;
-            }
-        </style>
     </head>
     <body>
-      <div>
-        
-      <div>
-          <div>
-            <h1>PROFILE</h1><hr style="margin-bottom:0px;">
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">ProFile</a>
+                </div>
 
-            <ul id="tabs">
-              <li class="tabs2"><a href="#photos">Photos</a></li>
-              <li class="tabs2" style="float:right"><a href="#" id="logout" style="display: none;">Log Out</a></li>
-            </ul>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#photos" class="nav__link">Photos</a></li>
+                        <li class="nav__item"><a href="#talents" class="nav__link">Talents</a></li>
+                        <li class="nav__item"><a href="#act3" class="nav__link">Activity #3</a></li>
+                    </ul>
+                </div>
 
-            <img src="images/tina2.jpg" alt="Tina" width="auto" height="600px"/>
-            <h1>CHRISTINA MAE T. GERZON</h1>
-            <p><strong>Nickname:</strong> Tina <br><strong>Birthday:</strong> October 23, 2002<br>
-                <strong>Height:</strong> 145cm <em>(4'9")</em> <br><strong>Weight:</strong> 43kg<em>(95 lbs)</em><br><strong>Blood Type:</strong> Unknown <br><strong>MBTI Type:</strong>Unknown </p>
-            <h2>Tina Facts</h2>
-            <div class="facts">
-            <ul class="list">
-                <li>Tina is from Baloi, Lanao del Norte</li>
-                <li>Her friends also her "Buyog" while her family call her "May May"</li>
-                <li>She has two younger sisters</li>
-                <li>Her hobbies are reading and listening to music</li>
-                <li>Her shoe size is 36</li>
-                <li>Her favorite fruit is Avocado</li>
-            </ul></div><hr>
-            <div id="photos">
-            <h1>PHOTOS</h1>
-            <center><div class="row">
-            <div class="container">
-              <img src="images/tina.jpg" alt="Tina" width="200" height="200px"/>
-              <p>02/09/2021</p>
-            </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
 
-            <div class="container">
-              <img src="images/tina3.jpg" alt="Tina" width="200" height="200px"/>
-              <p>25/12/2021</p>
-            </div>
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hello! I'am <br><span class="home__title-color">Christina Mae<br>Gerzon</span><br> BSIT - 3RD YEAR</h1>
 
-            <div class="container">
-              <img src="images/tina4.jpg" alt="Tina" width="200" height="200px"/>
-              <p>29/05/2022</p>
-            </div>
+                    <a href="#about" class="button">About Me</a>
+                </div>
 
-            <div class="container">
-              <img src="images/tina5.jpg" alt="Tina" width="200" height="200px"/>
-              <p>03/07/2022</p>
-            </div>
+                <div class="home__social">
+                    <a href="https://www.facebook.com/christinamae.gerzon.7?mibextid=ZbWKwL" class="home__social-icon"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://instagram.com/teenytinytina23?igshid=MTIzZWQxMDU=" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://twitter.com/bbabbangiiieee?t=7LTn1f0qHVVCtROk97WA0A&s=09" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
+                </div>
 
-            <div class="container">
-              <img src="images/tina6.jpg" alt="Tina" width="200" height="200px"/>
-              <p>17/12/2022</p>
-            </div>
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="40" y="-30" href="assets/img/tina_prof.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
 
-            <div class="container">
-              <img src="images/tina7.jpg" alt="Tina" width="200" height="200px"/>
-              <p>21/12/2022</p>
-            </div>
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title about_line" style="color:#ffff">About</h2>
 
-            <div class="container">
-              <img src="images/tina8.jpg" alt="Tina" width="200" height="200px"/>
-              <p>10/03/2023</p>
-            </div>
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/tina_about.jpg" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle" style="color: #ffff">Who am I?</h2>
+                        <p class="about__text" style="color: #ffff">
+                            I am Christina Mae Gerzon, 20 years old from Balo-i, Lanao del Norte.
+                            I am a 3rd year student of Information Technology at Mindanao State 
+                            University - Iligan Institute of Technology.
+                            <br><br>
+                            I love to stay in-doors but would also love to go out if someone invites
+                            me to go somewhere. I like to listen to music and watch movies or series
+                            in my free time.
 
-            <div class="container">
-              <img src="images/tina9.jpg" alt="Tina" width="200" height="200px"/>
-              <p>13/03/2023</p>
+                        </p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== PHOTOS =====-->
+            <section class="work section" id="photos">
+                <h2 class="section-title photos_line" style="color: #000000fd">PHOTOS</h2>
+
+                <div class="work__container bd-grid">
+                    <a href="" class="work__img">
+                        <img src="assets/img/tina.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/tina2.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/tina3.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/tina4.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/tina5.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/tina6.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/tina7.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/tina8.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/tina9.jpg" alt="">
+                    </a>
+                </div>
+            </section>
+
+            <!--===== TALENTS =====-->
+            <section class="skills section" id="talents">
+                <h2 class="section-title talents_line" style="color: #ffff">TALENTS</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle" style="color: #ffff">Developing Talents</h2>
+                        <p class="skills__text" style="color: #ffff">
+                        Talents are not necessarily in-born. With great preserverance and hardwork,
+                        it could be acquired and developed.
+                        </p>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <span class="skills__name">Dancing</span>
+                            </div>
+                            <div class="skills__bar skills__html">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">75%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <span class="skills__name">Singing</span>
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">50%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <span class="skills__name">Acting</span>
+                            </div>
+                            <div class="skills__bar skills__js">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">65%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <span class="skills__name">Drawing</span>
+                            </div>
+                            <div class="skills__bar skills__ux">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">20%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="assets/img/tina_dance.jpg" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== LAB ACTIVITY #3 =====-->
+            <section class="contact section" id="act3">
+                <h2 class="section-title act_line" style="color:black">Diary</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form">
+                        <input type="date" id="date" placeholder="Date" class="contact__input">
+                        <input type="text" id="title" placeholder="Diary Title" class="contact__input">
+                        <textarea name="" id="entry" cols="0" rows="10" class="contact__input"></textarea>
+                    
+                        <center><button type="submit" class="save contact__button button">Save</button>
+                        <button class="get-data contact__button button">Get Data</button>
+                        <button class="change-data contact__button button">Change Data</button>
+                        <button class="delete-data contact__button button">Delete Data</button>
+                    </center>
+                </form>
+                    
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Christina Mae Gerzon</p>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/christinamae.gerzon.7?mibextid=ZbWKwL" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://instagram.com/teenytinytina23?igshid=MTIzZWQxMDU=" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://twitter.com/bbabbangiiieee?t=7LTn1f0qHVVCtROk97WA0A&s=09" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
-            </div></center>
-            </div>
-          </div>
-      </div>
-  </body>
+            <p class="footer__copy">&#169; All rigths reserved</p>
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
 
 <script type="module">
 
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-  
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-apiKey: "AIzaSyDU7Sc9_WqIIHN6siYrIUKqPf-5404y5DY",
-authDomain: "gettingstartedwithfireba-d38f6.firebaseapp.com",
-projectId: "gettingstartedwithfireba-d38f6",
-storageBucket: "gettingstartedwithfireba-d38f6.appspot.com",
-messagingSenderId: "777429333088",
-appId: "1:777429333088:web:501f9362711dfa57157f05",
-measurementId: "G-SGMYE7X6HQ"
-};
-  
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  const auth = getAuth();
-  console.log(app);
-
-      document.getElementById('logout').style.display = 'block';
-   //----- Logout code start	  
-   document.getElementById("logout").addEventListener("click", function() {
-    signOut(auth).then(() => {
-      // Sign-out successful.
-      console.log('Sign-out successful.');
-      alert('Sign-out successful.');
-      window.location.href = "login.html";
-      document.getElementById('logout').style.display = 'none';
-    }).catch((error) => {
-      // An error happened.
-      console.log('An error happened.');
-    });		  		  
-  });
-  //----- End
-</script>
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
     
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+  apiKey: "AIzaSyDU7Sc9_WqIIHN6siYrIUKqPf-5404y5DY",
+  authDomain: "gettingstartedwithfireba-d38f6.firebaseapp.com",
+  projectId: "gettingstartedwithfireba-d38f6",
+  storageBucket: "gettingstartedwithfireba-d38f6.appspot.com",
+  messagingSenderId: "777429333088",
+  appId: "1:777429333088:web:501f9362711dfa57157f05",
+  measurementId: "G-SGMYE7X6HQ"
+  };
+    
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth();
+    console.log(app);
+  
+        document.getElementById('logout').style.display = 'block';
+     //----- Logout code start	  
+     document.getElementById("logout").addEventListener("click", function() {
+      signOut(auth).then(() => {
+        // Sign-out successful.
+        console.log('Sign-out successful.');
+        alert('Sign-out successful.');
+        window.location.href = "login.html";
+        document.getElementById('logout').style.display = 'none';
+      }).catch((error) => {
+        // An error happened.
+        console.log('An error happened.');
+      });		  		  
+    });
+    //----- End
+  </script>
